@@ -513,11 +513,11 @@ const exec = () => {
     $('#settings').removeClass('hidden').focus()
   })
 
-  $('#music').on('change', (e) => {
+  $('#music').on('input', (e) => {
     ipc.send('toPlayer', ['musicVol', e.target.value])
   })
 
-  $('#rain').on('change', (e) => {
+  $('#rain').on('input', (e) => {
     ipc.send('toPlayer', ['rainVol', e.target.value])
   })
 
